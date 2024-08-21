@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
-import logo from '../../images/logo.png';
+import logo from '../../images/logo2.png';
 
 const NavbarItem = ({ title, classProps }) => {
     return (
@@ -11,6 +12,8 @@ const NavbarItem = ({ title, classProps }) => {
 }
 
 const Navbar = () => {
+    const [toggleMenu, setToggleMenu] = useState(false);
+
     return (
         <nav className='w-full flex md:justify-center justify-between items-center p-4'>
             <div className='md:flex-[0.5] flex-initial justify-center items-center'>
@@ -24,6 +27,12 @@ const Navbar = () => {
                     Login
                 </li>
             </ul>
+            <div className='flex relative'>
+                {toggleMenu
+                   ? <AiOutlineClose fontSize={28} className='text-white md:hidden cursor-pointer' onClick={() => setToggleMenu(false)} /> 
+                   : <HiMenuAlt4 fontSize={28} className='text-white md:hidden cursor-pointer' onClick={() => setToggleMenu(true)} />
+                }
+            </div>
         </nav>
     );
 }
