@@ -27,11 +27,23 @@ const Navbar = () => {
                     Login
                 </li>
             </ul>
-            <div className='flex relative'>
+            <div className='flex relative'> {/* Mobile navbar */}
                 {toggleMenu
                    ? <AiOutlineClose fontSize={28} className='text-white md:hidden cursor-pointer' onClick={() => setToggleMenu(false)} /> 
-                   : <HiMenuAlt4 fontSize={28} className='text-white md:hidden cursor-pointer' onClick={() => setToggleMenu(true)} />
-                }
+                   : <HiMenuAlt4 fontSize={28} className='text-white md:hidden cursor-pointer' onClick={() => setToggleMenu(true)} />}
+                {toggleMenu && (
+                    <ul
+                        className='z-10 fixed top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none
+                            flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in'
+                    >
+                        <li className='text_xl w-full my-2'>
+                            <AiOutlineClose onClick={() => setToggleMenu(false)} /> {/* Only when the navbar is open */}
+                        </li>
+                        {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
+                            <NavbarItem key={item + index} title={item} classProps="my-2 text-lg" />
+                        ))}
+                    </ul>
+                )}   
             </div>
         </nav>
     );
