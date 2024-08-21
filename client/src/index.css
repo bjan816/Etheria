@@ -60,7 +60,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.eth-card {
+.eth-card-default {
   background-color:#a099ff;
   background-image: 
     radial-gradient(at 83% 67%, rgb(152, 231, 156) 0, transparent 58%), 
@@ -71,6 +71,19 @@ body {
     radial-gradient(at 74% 89%, hsla(30,98%,65%,1) 0, transparent 51%), 
     radial-gradient(at 53% 75%, hsla(174,94%,68%,1) 0, transparent 45%);
 }
+
+.eth-card {
+  background-color: #c8c8ff;
+  background-image: 
+    radial-gradient(at 85% 70%, rgba(193, 240, 255, 1) 0, transparent 60%), 
+    radial-gradient(at 65% 30%, rgba(252, 193, 243, 1) 0, transparent 55%), 
+    radial-gradient(at 80% 40%, rgba(172, 195, 255, 1) 0, transparent 50%), 
+    radial-gradient(at 40% 90%, rgba(208, 255, 193, 1) 0, transparent 50%), 
+    radial-gradient(at 25% 75%, rgba(255, 182, 195, 1) 0, transparent 50%), 
+    radial-gradient(at 70% 85%, rgba(255, 234, 193, 1) 0, transparent 50%), 
+    radial-gradient(at 50% 65%, rgba(193, 193, 255, 1) 0, transparent 50%);
+}
+
 
 .text-gradient {
   background-color: #fff;
