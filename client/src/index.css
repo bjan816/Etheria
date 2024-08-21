@@ -82,7 +82,44 @@ body {
     radial-gradient(at 25% 75%, rgba(255, 182, 195, 1) 0, transparent 50%), 
     radial-gradient(at 70% 85%, rgba(255, 234, 193, 1) 0, transparent 50%), 
     radial-gradient(at 50% 65%, rgba(193, 193, 255, 1) 0, transparent 50%);
+  transition: background-image 0.5s ease-in-out;
 }
+
+.eth-card:hover {
+  background-image: 
+    radial-gradient(at 50% 65%, rgba(193, 240, 255, 1) 0, transparent 60%), 
+    radial-gradient(at 70% 85%, rgba(252, 193, 243, 1) 0, transparent 55%), 
+    radial-gradient(at 25% 75%, rgba(172, 195, 255, 1) 0, transparent 50%), 
+    radial-gradient(at 40% 90%, rgba(208, 255, 193, 1) 0, transparent 50%), 
+    radial-gradient(at 80% 40%, rgba(255, 182, 195, 1) 0, transparent 50%), 
+    radial-gradient(at 65% 30%, rgba(255, 234, 193, 1) 0, transparent 50%), 
+    radial-gradient(at 85% 70%, rgba(193, 193, 255, 1) 0, transparent 50%);
+}
+
+.eth-card-2 {
+  background-color: #e3e3ff;
+  background-image: 
+    radial-gradient(at 80% 65%, rgba(240, 210, 255, 1) 0, transparent 60%), 
+    radial-gradient(at 70% 30%, rgba(180, 235, 255, 1) 0, transparent 55%), 
+    radial-gradient(at 85% 40%, rgba(255, 192, 210, 1) 0, transparent 50%), 
+    radial-gradient(at 30% 85%, rgba(210, 255, 240, 1) 0, transparent 50%), 
+    radial-gradient(at 25% 75%, rgba(255, 240, 210, 1) 0, transparent 50%), 
+    radial-gradient(at 65% 80%, rgba(195, 210, 255, 1) 0, transparent 50%), 
+    radial-gradient(at 50% 60%, rgba(210, 240, 255, 1) 0, transparent 50%);
+  transition: background-image 0.5s ease-in-out;
+}
+
+.eth-card-2:hover {
+  background-image: 
+    radial-gradient(at 20% 35%, rgba(240, 210, 255, 1) 0, transparent 60%), 
+    radial-gradient(at 30% 70%, rgba(180, 235, 255, 1) 0, transparent 55%), 
+    radial-gradient(at 15% 60%, rgba(255, 192, 210, 1) 0, transparent 50%), 
+    radial-gradient(at 70% 15%, rgba(210, 255, 240, 1) 0, transparent 50%), 
+    radial-gradient(at 75% 25%, rgba(255, 240, 210, 1) 0, transparent 50%), 
+    radial-gradient(at 35% 20%, rgba(195, 210, 255, 1) 0, transparent 50%), 
+    radial-gradient(at 50% 40%, rgba(210, 240, 255, 1) 0, transparent 50%);
+}
+
 
 
 .text-gradient {
