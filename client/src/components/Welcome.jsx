@@ -3,7 +3,7 @@ import { SiEthereum } from 'react-icons/si';
 import { BsInfoCircle } from 'react-icons/bs';
 import { Loader } from './';
 
-const commonStyles = 'min-h-[70px] sm:px-0 px -2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-grey-400 text-sm font-light text-white';
+const commonStyles = 'min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white';
 
 const Welcome = () => {
 
@@ -59,10 +59,10 @@ const Welcome = () => {
                                 <BsInfoCircle fontSize={17} color='#fff' />
                             </div>
                             <div>
-                                <p className='text-gray-600 text-sm'>
+                                <p className='text-gray-700 text-sm'>
                                     Address
                                 </p>
-                                <p className='text-gray-600 font-semibold text-lg mt-1'>
+                                <p className='text-gray-700 font-semibold text-lg mt-1'>
                                     Ethereum
                                 </p>
                             </div>
