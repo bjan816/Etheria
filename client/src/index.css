@@ -120,8 +120,6 @@ body {
     radial-gradient(at 50% 40%, rgba(210, 240, 255, 1) 0, transparent 50%);
 }
 
-
-
 .text-gradient {
   background-color: #fff;
   background-image: radial-gradient(at 4% 36%, hsla(0,0%,100%,1) 0, transparent 53%), radial-gradient(at 100% 60%, rgb(0, 0, 0) 0, transparent 50%);
