@@ -23,7 +23,7 @@ const Navbar = () => {
                 {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
                     <NavbarItem key={item + index} title={item} />
                 ))}
-                <li className='eth-card-2 text-black py-2 px-7 mx-4 rounded-full cursor-pointer'>
+                <li className='eth-card-2 text-black py-2 px-7 mx-4 rounded-full cursor-pointer font-semibold'>
                     Login
                 </li>
             </ul>
