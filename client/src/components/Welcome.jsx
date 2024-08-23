@@ -40,7 +40,7 @@ const Welcome = () => {
                     <button
                         type="button"
                         onClick={connectWallet}
-                        className='flex flex-row justify-center items-center my-5 eth-card-2 p-3 rounded-full cursor-pointer'
+                        className='flex flex-row justify-center items-center my-5 button-gradient p-3 rounded-full cursor-pointer'
                     >
                         <p className='text-base font-semibold'>Connect Wallet</p>
                     </button>
@@ -75,10 +75,10 @@ const Welcome = () => {
                                 <BsInfoCircle fontSize={17} color='#fff' />
                             </div>
                             <div>
-                                <p className='text-gray-700 text-sm'>
+                                <p className='text-gray-800 text-sm'>
                                     Address
                                 </p>
-                                <p className='text-gray-700 font-semibold text-lg mt-1'>
+                                <p className='text-gray-800 font-semibold text-lg mt-1'>
                                     Ethereum
                                 </p>
                             </div>
