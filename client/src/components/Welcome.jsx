@@ -89,7 +89,7 @@ const Welcome = () => {
                         <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={() => {}} />
                         <Input placeholder="Keyword (Gif)" name="keyword" type="text" handleChange={() => {}} />
                         <Input placeholder="Enter Message" name="message" type="text" handleChange={() => {}} />
-                        <div className='h-[1px] w-full bg-gray-400 my-2' />
+                        <div className='h-[1px] w-full bg-gray-500 my-2' />
                         {false ? (
                             <Loader />
                         ) : (
