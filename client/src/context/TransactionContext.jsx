@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import { contractABI, contractAddress } from "../utils/constants";
+import BN from "bn.js";
 
 export const TransactionContext = React.createContext();
 
@@ -62,15 +63,20 @@ export const TransactionProvider = ({ children }) => {
             const { addressTo, amount, keyword, message } = formData;
             const transactionContract = getEthereumContract();
             const parsedAmount = ethers.parseEther(amount);
+            const parsedAmountBN = new BN(parsedAmount, 10);
+
+            // It has been abandoned, use BN.js instead
+            // console.log(parsedAmount);
+            // console.log(parsedAmount._hex);
 
             await ethereum.request({
                 method: 'eth_sendTransaction',
                 params: [{
                     from: currentAccount,
                     to: addressTo,
-                    gas: '0x5208', // 21000 GWEI
-                    value: parsedAmount._hex, // 0.00001
-                }]
+                    // gas: '0x5208', // 21000 GWEI
+                    value: parsedAmountBN.toString(16), // parsedAmount._hex,
+                }],
             });
 
             const transactionHash = await transactionContract.addToBlockchain(addressTo, parsedAmount, message, keyword);
