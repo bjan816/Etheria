@@ -43,22 +43,21 @@ const Welcome = () => {
                     <p className='text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base'>
                         Explore the crypto world. Buy and sell cryptocurrencies easily on Etheria.
                     </p>
-                    {!currentAccount && (
-                        <button
-                            type="button"
-                            onClick={connectWallet}
-                            className='flex flex-row justify-center items-center my-5 button-gradient p-3 rounded-full cursor-pointer'
-                        >
-                            <p className='text-base font-semibold'>Connect Wallet</p>
-                        </button>
-                    )}
-                    {currentAccount && (
+                    {currentAccount ? (
                         <button
                             type="button"
                             onClick={connectWallet}
                             className='flex flex-row justify-center items-center my-5 button-gradient p-3 rounded-full cursor-pointer'
                         >
                             <p className='text-base font-semibold'>Wallet Connected</p>
+                        </button>
+                    ) : (
+                        <button
+                            type="button"
+                            onClick={connectWallet}
+                            className='flex flex-row justify-center items-center my-5 button-gradient p-3 rounded-full cursor-pointer'
+                        >
+                            <p className='text-base font-semibold'>Connect Wallet</p>
                         </button>
                     )}
                     <div className='grid sm:grid-cols-3 grid-cols-2 w-full mt-10'>
