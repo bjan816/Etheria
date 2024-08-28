@@ -8,21 +8,21 @@ export const TransactionContext = React.createContext();
 const { ethereum } = window;
 
 const getEthereumContract = () => {
-        const provider = new ethers.BrowserProvider(ethereum);
+        const provider = new ethers.BrowserProvider(ethereum); // updated
         const signer = provider.getSigner();
         const transactionContract = new ethers.Contract(contractAddress, contractABI, signer);
         return transactionContract;
-}
+};
 
 export const TransactionProvider = ({ children }) => {
-    const [currentAccount, setCurrentAccount] = useState("");
     const [formData, setFormData] = useState({ addressTo: '', amount: '', keyword: '', message: '' });
+    const [currentAccount, setCurrentAccount] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [transactionCount, setTransactionCount] = useState(localStorage.getItem('transactionCount'));
 
     const handleChange = (e, name) => {
         setFormData((prevState) => ({ ...prevState, [name]: e.target.value }));
-    }
+    };
 
     const checkIfWalletIsConnected = async () => {
         try {
@@ -35,7 +35,7 @@ export const TransactionProvider = ({ children }) => {
     
             // getAllTransactions();
           } else {
-            console.log("No accounts found");
+            console.log("No accounts found.");
           }
         } catch (error) {
           console.log(error);
@@ -45,7 +45,7 @@ export const TransactionProvider = ({ children }) => {
 
     const connectWallet = async () => {
         try {
-            if (!ethereum) return alert("Please install Metamask");
+            if (!ethereum) return alert("Please install Metamask.");
             
             const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
 
@@ -58,11 +58,11 @@ export const TransactionProvider = ({ children }) => {
 
     const sendTransaction = async () => {
         try {
-            if (!ethereum) return alert("Please install Metamask");
+            if (!ethereum) return alert("Please install Metamask.");
 
             const { addressTo, amount, keyword, message } = formData;
             const transactionContract = getEthereumContract();
-            const parsedAmount = ethers.parseEther(amount);
+            const parsedAmount = ethers.parseEther(amount); // updated
             const parsedAmountBN = new BN(parsedAmount, 10);
 
             // It has been abandoned, use BN.js instead
@@ -84,8 +84,8 @@ export const TransactionProvider = ({ children }) => {
             setIsLoading(true);
             console.log(`Loading - ${transactionHash.hash}`);
             await transactionHash.wait();
-            setIsLoading(false);
             console.log(`Success - ${transactionHash.hash}`);
+            setIsLoading(false);
 
             const transactionCount = await transactionContract.getTransactionCount();
 
@@ -94,7 +94,7 @@ export const TransactionProvider = ({ children }) => {
             console.log(error);
             throw new Error("No ethereum object.");
         }
-    }
+    };
 
     useEffect(() => {
         checkIfWalletIsConnected();
