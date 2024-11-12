@@ -17,8 +17,8 @@ const Footer = () => (
     </div>
 
     <div className="flex justify-center items-center flex-col mt-5">
-      <p className="text-white text-sm text-center">Come join us and hear for the unexpected miracle</p>
-      <p className="text-white text-sm text-center font-medium mt-2">bjan816@socialinfratech.com</p>
+      <p className="text-white text-sm text-center">Contact us and hear for the unexpected miracle&#33;</p>
+      <p className="text-white text-sm text-center font-medium mt-2">bjan816@aucklanduni.ac.nz</p>
     </div>
 
     <div className="sm:w-[90%] w-full h-[0.25px] bg-gray-400 mt-5 " />
